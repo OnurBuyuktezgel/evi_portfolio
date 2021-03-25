@@ -4,11 +4,12 @@ class ContactMailer < ApplicationMailer
   #
   #   en.contact_mailer.contact.subject
   #
-  def contact_confirmation(contact)
-    @contact = contact
+  def contact_confirmation
+    @contact = params[:contact]
+
     mail(
-      to: "obuyuktezgel@gmail.com",
-      subject: '❗New message on EviSanoll.com 🎶🎺'
+      to: 'obuyuktezgel@gmail.com',
+      subject: '❗️New message on EviSanoll.com 🎶🎺',
     )
   end
 end
