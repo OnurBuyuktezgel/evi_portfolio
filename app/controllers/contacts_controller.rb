@@ -5,12 +5,13 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    @contact.request = request
-    if @contact.deliver
+
+    if @contact.save
+      ContactMailer.contact_confirmation(@contact).deliver_now
       flash.now[:error] = nil
-      redirect_to root_path, notice: 'Message sent successfully'
+      redirect_to root_path, notice: 'Message sent successfully.'
     else
-      flash.now[:error] = 'Cannot send message'
+      flash.now[:error] = 'Cannot send message, please try again.'
       render :new
     end
   end

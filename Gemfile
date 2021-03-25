@@ -25,8 +25,8 @@ gem 'redis', '~> 4.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-# Mail_form
-gem 'mail_form'
+# To test email forms in development
+gem 'letter_opener', group: :development
 
 # Image and file service
 gem 'cloudinary', '~> 1.16.0'
