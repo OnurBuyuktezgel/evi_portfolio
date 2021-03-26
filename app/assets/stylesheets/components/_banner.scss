@@ -1,0 +1,19 @@
+.banner {
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+#banner-image {
+  filter: drop-shadow(0 0 9rem rgba(0,0,0,0.2));
+  text-align: right;
+  padding: 48px;
+  width: 50%;
+  height: auto;
+}
+
+.banner-content {
+  margin-left: 48px;
+}
