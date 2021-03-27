@@ -1,22 +1,22 @@
 .banner {
   display: grid;
-  grid-template-columns: 6fr 6fr;
-  grid-gap: 32px;
-  margin: 64px;
-  // padding: 64px;
+  grid-template-columns: 4fr 3fr;
+  padding: 8px;
   align-items: center;
-  position: relative;
+  grid-gap: 16px;
 }
 
 #banner-image {
+  position: relative;
+  margin: auto;
   filter: drop-shadow(0 0 7rem rgba(255,88,93,0.3));
-  height: auto;
-  width: 60vh;
-  padding: 64px;
+  width: 60vw;
 }
 
 .banner-content {
   flex-grow: 1;
+  margin: auto;
+  padding: 8px;
   h1 {
     font-weight: bolder;
     font-size: 70px;
@@ -26,16 +26,48 @@
 
 
 // Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
+@media (min-width: 100px) and (max-width: 320px) {
   .banner {
     grid-template-columns: 1fr;
   }
+
+  .banner-content {
+    order: 2;
+    text-align: center;
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  .banner-visual {
+    order: 1;
+    margin: auto !important;
+    #banner-image {
+      width: 70vw;
+    }
+  }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+
+@media (min-width: 320px) and (max-width: 767px) {
   .banner {
     grid-template-columns: 1fr;
+  }
+
+  .banner-content {
+    order: 2;
+    text-align: center;
+    h1 {
+     font-size: 50px;
+    }
+  }
+
+  .banner-visual {
+    order: 1;
+    margin: auto !important;
+    #banner-image {
+      width: 70vw;
+    }
   }
 }
 
@@ -43,19 +75,21 @@
 @media (min-width: 768px) {
   .banner {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    padding: 32px;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .banner {
-    grid-template-columns: 6fr 6fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .banner {
-    grid-template-columns: 6fr 6fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
