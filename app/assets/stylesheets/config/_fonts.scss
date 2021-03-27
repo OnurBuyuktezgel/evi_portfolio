@@ -1,9 +1,11 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto Sans:400,700|Work+Sans:400,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Alata&family=Hind:wght@700&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "Noto Sans", "Helvetica", "sans-serif";
+$headers-font: "Noto Sans", "Helvetica", "sans-serif";
+// $home-2: "Alata", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -14,3 +16,5 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+

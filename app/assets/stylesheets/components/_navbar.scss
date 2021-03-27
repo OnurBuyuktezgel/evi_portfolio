@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  padding: 8px 32px 0px 32px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,5 +13,39 @@
 }
 
 #logo {
-  width: 100px;
+  width: 120px;
+}
+
+
+.nav-item {
+  font-weight: bold;
+  font-family: $headers-font;
+}
+
+.nav-item a:hover {
+  text-style:none;
+  color: $almost-black !important;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 767px) {
+  .navbar-lewagon {
+    padding: 8px;
+    #logo {
+      width: 90px;
+    }
+  }
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .dropdown {
+    text-align: center;
+    min-height: 100vh;
+  }
+  .navbar-nav {
+    margin-top: 100px;
+    .nav-link {
+      font-size: 2em;
+    }
+  }
 }

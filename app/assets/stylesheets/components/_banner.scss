@@ -1,6 +1,5 @@
 .banner {
   display: grid;
-  grid-template-columns: 4fr 3fr;
   padding: 8px;
   align-items: center;
   grid-gap: 16px;
@@ -9,7 +8,7 @@
 #banner-image {
   position: relative;
   margin: auto;
-  filter: drop-shadow(0 0 7rem rgba(255,88,93,0.3));
+  filter: drop-shadow(0 0 7rem rgba(0,0,0,0.3)); //255,88,93,0.3
   width: 60vw;
 }
 
