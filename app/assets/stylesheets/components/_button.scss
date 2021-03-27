@@ -1,0 +1,17 @@
+.btn-flat {
+  color: $almost-white;
+  background: $light-red;
+  padding: 8px 16px;
+  margin-top: 40px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  font-size: 18px;
+}
+
+.btn-flat:hover {
+  background-color: #E00007;
+  padding: 8px 16px;
+  transform: scale(1.05);
+  color: $almost-white;
+  text-decoration: none;
+}
