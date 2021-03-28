@@ -1,11 +1,20 @@
 <div class="container">
-  <%= simple_form_for @contact do |f| %>
-      <%= f.input :first_name, label: 'First name' %>
-      <%= f.input :last_name, label: 'Last name' %>
-      <%= f.input :email, label: 'Email address' %>
-      <%= f.input :phone, label: 'Phone' %>
-      <%= f.input :message, :input_html => {:rows => 10}, label: 'Your message' %>
-      <%= f.invisible_captcha :subtitle %>
-      <%= f.button :submit, 'Send message', class: "btn btn-flat btn-lg" %>
-  <% end %>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8 col-sm-8">
+      <div class="form-login">
+        <h2>Contact</h2>
+        <%= simple_form_for @contact do |f| %>
+          <%= f.input :first_name, label: 'First name' %>
+          <%= f.input :last_name, label: 'Last name' %>
+          <%= f.input :email, label: 'Email address' %>
+          <%= f.input :phone, label: 'Phone' %>
+          <%= f.input :message, :input_html => {:rows => 3}, label: 'Your message' %>
+          <%= f.invisible_captcha :subtitle %>
+          <%= f.button :submit, 'Send message', class: "btn btn-flat btn-lg", id: "contact-button" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
+

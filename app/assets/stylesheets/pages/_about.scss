@@ -1,0 +1,37 @@
+.about {
+  display: grid;
+  padding: 8px;
+  grid-gap: 16px;
+  grid-template-columns: 60% 40%;
+  margin-top: 100px;
+}
+
+.about-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  img {
+    width: 60%;
+    box-shadow: 0px 0px 0px 5px $almost-white, 0px 0px 0px 10px $almost-black;
+    filter: grayscale(100%);
+    vertical-align: top;
+    margin-top: 24px;
+  }
+}
+
+.about-content {
+  flex-grow: 1;
+  padding: 8px;
+}
+
+.about-info {
+  vertical-align: top;
+  h1 {
+    font-weight: bolder;
+    font-size: 70px;
+    color: $almost-black;
+    margin-bottom: 20px;
+  }
+}
+
