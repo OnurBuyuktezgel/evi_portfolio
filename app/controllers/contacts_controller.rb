@@ -1,4 +1,10 @@
 class ContactsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new, :create]
+
+  def index
+    @contacts = policy_scope(Contact).order(created_at: :desc)
+  end
+
   def new
     @contact = Contact.new
   end

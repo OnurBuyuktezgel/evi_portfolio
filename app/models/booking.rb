@@ -1,4 +1,4 @@
 class Booking < ApplicationRecord
-  belongs_to :student
   belongs_to :lecture
+  belongs_to :user
 end
