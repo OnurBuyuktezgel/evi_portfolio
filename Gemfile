@@ -34,9 +34,11 @@ gem 'cloudinary', '~> 1.16.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# Authorization, authentication, and form security.
 gem 'devise'
 gem 'pundit'
 gem 'strong_password', '~> 0.0.8'
+gem 'invisible_captcha'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'

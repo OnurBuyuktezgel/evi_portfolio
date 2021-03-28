@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
+  invisible_captcha only: [:create], honeypot: :subtitle
 
   def index
     @contacts = policy_scope(Contact).order(created_at: :desc)
