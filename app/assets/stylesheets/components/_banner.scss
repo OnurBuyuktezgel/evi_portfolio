@@ -25,7 +25,7 @@
 
 
 // Smallest device
-@media (min-width: 100px) and (max-width: 320px) {
+@media (min-width: 100px) and (max-width: 280px) {
   .banner {
     grid-template-columns: 1fr;
   }
@@ -47,6 +47,27 @@
   }
 }
 
+@media (min-width: 280px) and (max-width: 320px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-content {
+    order: 2;
+    text-align: center;
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  .banner-visual {
+    order: 1;
+    margin: auto !important;
+    #banner-image {
+      width: 50vw;
+    }
+  }
+}
 
 @media (min-width: 320px) and (max-width: 767px) {
   .banner {
