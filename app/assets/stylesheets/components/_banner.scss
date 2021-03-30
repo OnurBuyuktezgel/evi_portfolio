@@ -92,11 +92,26 @@
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .banner {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 8px;
-    padding: 32px;
+    grid-template-columns: 1fr;
+  }
+
+  .banner-content {
+    order: 2;
+    text-align: center;
+    margin-top: 32px;
+    h1 {
+     font-size: 50px;
+    }
+  }
+
+  .banner-visual {
+    order: 1;
+    margin: auto !important;
+    #banner-image {
+      width: 60vw;
+    }
   }
 }
 
@@ -104,6 +119,7 @@
 @media (min-width: 992px) {
   .banner {
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 }
 

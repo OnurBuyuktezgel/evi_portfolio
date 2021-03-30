@@ -1,0 +1,81 @@
+.intro-copy {
+  padding: 1em;
+  margin: 50vh auto;
+  max-width: 15em;
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 2em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.top-link {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 3em 0;
+  border-radius: 50%;
+  padding: .25em;
+  width: 80px;
+  height: 80px;
+  background-color: #F8F8F8;
+  color: $almost-black;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &:hover {
+    background-color: #E8E8E8;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 280px) {
+  .top-link {
+    margin: 0 0.5em 1em 0;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 281px) and (max-width: 320px) {
+  .top-link {
+    margin: 0 0.7em 1em 0;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .top-link {
+    margin: 0 1em 1em 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 962px) {
+  .top-link {
+    margin: 0 1em 1em 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+
