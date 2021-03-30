@@ -1,3 +1,7 @@
+.about {
+  margin-top: 10em;
+}
+
 .about-left {
   display: grid;
   padding: 8px;
@@ -46,6 +50,9 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 280px) {
+  .about {
+    margin-top: 4em;
+  }
   .about-left, .about-right {
     grid-template-columns: 1fr;
     margin-top: 10px;
@@ -78,6 +85,9 @@
 }
 
 @media (min-width: 281px) and (max-width: 320px) {
+  .about {
+    margin-top: 4em;
+  }
   .about-left, .about-right {
     grid-template-columns: 1fr;
     margin-top: 10px;
@@ -111,6 +121,9 @@
 
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .about {
+    margin-top: 4em;
+  }
   .about-left, .about-right {
     grid-template-columns: 1fr;
     margin-top: 10px;
@@ -144,6 +157,9 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 1200px) {
+  .about {
+    margin-top: 6em;
+  }
   .about-left, .about-right {
     grid-template-columns: 1fr 1fr;
     margin-top: 30px;
