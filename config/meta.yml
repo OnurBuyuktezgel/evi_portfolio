@@ -1,0 +1,5 @@
+meta_product_name: "Evi Sanoll"
+meta_title: "Evi Sanoll - Personal website"
+meta_description: "Hi, I'm Evi Sanoll. I'm a professional trumpet player and music teacher."
+meta_image: "background-4-og.png" # should exist in `app/assets/images/`
+twitter_account: "@evisanoll"   # required for Twitter Cards
