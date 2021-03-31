@@ -48,6 +48,7 @@
     margin: auto !important;
     #banner-image {
       width: 50vw;
+      filter: drop-shadow(0 0 2rem rgba(0,0,0,0.3));
     }
   }
 }
@@ -55,7 +56,7 @@
 @media (min-width: 281px) and (max-width: 320px) {
   .banner {
     grid-template-columns: 1fr;
-    margin-top: 4em;
+    margin-top: 5em;
   }
 
   .banner-content {
@@ -71,6 +72,7 @@
     margin: auto !important;
     #banner-image {
       width: 50vw;
+      filter: drop-shadow(0 0 1rem rgba(0,0,0,0.3));
     }
   }
 }
@@ -94,6 +96,7 @@
     margin: auto !important;
     #banner-image {
       width: 60vw;
+      filter: drop-shadow(0 0 2rem rgba(0,0,0,0.3));
     }
   }
 }
@@ -102,6 +105,10 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .banner {
     grid-template-columns: 1fr;
+  }
+
+  #banner-image {
+    filter: drop-shadow(0 0 2rem rgba(0,0,0,0.3));
   }
 
   .banner-content {
