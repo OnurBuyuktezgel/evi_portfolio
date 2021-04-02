@@ -9,7 +9,7 @@ class ContactMailer < ApplicationMailer
 
     mail(
       to: 'obuyuktezgel@gmail.com',
-      subject: '❗️New message on EviSanoll.com 🎶🎺',
+      subject: '❗️New message on EviSanoll.com 🎶🎺'
     )
   end
 end
