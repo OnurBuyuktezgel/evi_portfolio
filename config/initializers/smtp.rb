@@ -1,5 +1,5 @@
 ActionMailer::Base.smtp_settings = {
-  user_name: 'evisanoll',
+  user_name: 'apikey',
   password: ENV['SENDGRID_PASSWORD'],
   domain: 'evisanoll.com',
   address: "smtp.sendgrid.net",
