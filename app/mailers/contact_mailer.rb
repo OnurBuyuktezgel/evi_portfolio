@@ -8,7 +8,7 @@ class ContactMailer < ApplicationMailer
     @contact = params[:contact]
 
     mail(
-      to: 'obuyuktezgel@gmail.com',
+      to: 'evi.sanoll@hotmail.de',
       subject: '❗️New message on EviSanoll.com 🎶🎺'
     )
   end

@@ -19,7 +19,7 @@ class ContactsController < ApplicationController
       mail = ContactMailer.with(contact: @contact).contact_confirmation
       mail.deliver_now
       flash[:notice] = 'Message sent successfully.'
-      redirect_to root_path
+      redirect_to new_contact_path
     else
       flash[:error] = 'Cannot send message, please try again.'
       render :new
