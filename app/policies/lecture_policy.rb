@@ -6,7 +6,7 @@ class LecturePolicy < ApplicationPolicy
   end
 
   def create?
-    admin?
+    user_admin?
   end
 
   def show?
@@ -14,16 +14,16 @@ class LecturePolicy < ApplicationPolicy
   end
 
   def update?
-    admin?
+    user_admin?
   end
 
   def destroy?
-    admin?
+    user_admin?
   end
 
   private
 
-  def admin?
-    user == user.admin
+  def user_admin?
+    user == record.user || user.admin
   end
 end

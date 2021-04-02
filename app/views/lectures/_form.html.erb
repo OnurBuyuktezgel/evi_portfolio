@@ -1,0 +1,12 @@
+<%= simple_form_for(@lecture) do |f| %>
+  <%= f.input :title, label: 'Title' %>
+  <%= f.input :category, label: 'Category' %>
+  <%= f.input :price, label: 'Price per hour (€)' %>
+  <%= f.input :status, as: :radio_buttons,
+               collection: [['Not-published', '0'], ['Published', '1']] %>
+  <%= f.input :start_at, label: 'Date',  discard_year: true, :minute_step => 15 %>
+  <%= f.input :duration, label: 'Duration (hours)', collection: [0.5, 1, 1.5, 2, 2.5, 3] %>
+  <%= f.input :description, label: 'Describe your class' %>
+  <%= f.input :photo, label: 'Add a photo for your class', as: :file %>
+  <%= f.button :submit, 'Create', class: 'btn-gradient' %>
+<% end %>

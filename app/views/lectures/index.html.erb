@@ -1,0 +1,25 @@
+<div class="cards">
+  <% @lectures.each do |lecture| %>
+  <div class="card-trip">
+    <%= link_to lecture_path(lecture) do %>
+      <% if lecture.photo.attached? %>
+        <%= cl_image_tag lecture.photo.key, height: 200, crop: :fit, class: "card-image" %>
+      <% else %>
+        <%= image_tag "background-4.webp", class: "card-image" %>
+      <% end %>
+    <% end %>
+    <div class="card-trip-infos">
+      <div class="lecture-info">
+        <h2><%= link_to lecture.title, lecture_path(lecture) %></h2>
+        <p><%= lecture.description %></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= lecture.price %>€</h2>
+      <% if lecture.user.photo.attached? %>
+        <%= cl_image_tag lecture.user.photo.key, class: "card-trip-user avatar-bordered"%>
+      <% else %>
+        <%= image_tag "evi-sanoll.jpg", class: "card-trip-user avatar-bordered" %>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+</div>

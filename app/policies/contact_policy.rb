@@ -24,6 +24,6 @@ class ContactPolicy < ApplicationPolicy
   private
 
   def admin?
-    user == user.admin
+    user == record.user || user.admin
   end
 end
