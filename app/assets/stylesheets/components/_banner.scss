@@ -24,6 +24,17 @@
   }
 }
 
+.showbanner {
+  margin: 6em 0 2em 0;
+  background-size: cover;
+  background-position: center;
+  height: 20vw;
+  padding: 80px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h1, h3 {
+    color: $almost-white;
+  }
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 280px) {

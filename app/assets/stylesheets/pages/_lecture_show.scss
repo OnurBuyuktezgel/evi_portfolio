@@ -1,0 +1,100 @@
+.show-cards {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .show-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .show-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .show-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .show-cards {
+    grid-template-columns: 8fr 4fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .show-cards {
+    grid-template-columns: 8fr 4fr;
+  }
+}
+
+.card-description {
+  padding: 16px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.card-description h3 {
+  color: $light-red;
+}
+
+.card-description p {
+  font-size: 18px;
+}
+
+.card-description ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-info {
+  padding: 16px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.card-info h3 {
+  color: $light-red;
+}
+
+.card-info p {
+  font-size: 18px;
+}
+
+.info-details {
+  margin-bottom: 60px;
+}
+
+.button-container {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+}
+
+.card-reviews {
+  margin: 16px;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.card-reviews h3 {
+  color: $light-red;
+}
+

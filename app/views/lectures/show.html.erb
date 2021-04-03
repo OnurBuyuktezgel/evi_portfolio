@@ -1,0 +1,35 @@
+<div class="container">
+  <% if @lecture.photo.attached? %>
+    <div class="showbanner" style=" background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @lecture.photo.key, class: "showbanner" %>);">
+  <% else %>
+    <div class="showbanner" style=" background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'https://images.unsplash.com/photo-1513829596324-4bb2800c5efb' %>);">
+  <% end %>
+  </div>
+
+  <div class="show-cards">
+    <div class="card-description">
+      <h1><%= @lecture.title %> (<%= @lecture.category %>)</h1>
+      <p><%= @lecture.description %></p>
+      <div class="button-container">
+        <% if @lecture.user == current_user %>
+          <%= link_to 'Edit', edit_lecture_path(@lecture), class: "btn btn-flat" %>
+          <%= link_to 'Delete', lecture_path(@lecture), method: :delete, data: { confirm: 'Do you really want to delete this class?' }, class: "btn btn-ghost" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card-info">
+      <h3>Booking Details</h3>
+      <div class="info-details">
+        <p><i class="fas fa-calendar-day pr-3"></i><%=@lecture.start_at%></p>
+        <p><i class="fas fa-history pr-3"></i><%= @lecture.duration%> hours</p>
+        <p><i class="fas fa-money-bill-wave pr-3"></i><%= @lecture.price%> €</p>
+      </div>
+      <div class="button-container">
+        <% unless @lecture.user == current_user %>
+          <%= link_to 'Book Class', lecture_bookings_path(@lecture), method: :POST ,class: "btn btn-gradient"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
