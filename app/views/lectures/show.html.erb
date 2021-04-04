@@ -13,22 +13,41 @@
       <div class="button-container">
         <% if @lecture.user == current_user %>
           <%= link_to 'Edit', edit_lecture_path(@lecture), class: "btn btn-flat" %>
-          <%= link_to 'Delete', lecture_path(@lecture), method: :delete, data: { confirm: 'Do you really want to delete this class?' }, class: "btn btn-ghost" %>
+          <%= link_to 'Delete', lecture_path(@lecture), method: :delete, data: { confirm: 'Do you really want to delete this class?' }, class: "btn btn-flat btn-lg", id: "delete-button" %>
         <% end %>
       </div>
     </div>
 
     <div class="card-info">
-      <h3>Booking Details</h3>
+      <h3>Booking details</h3>
       <div class="info-details">
-        <p><i class="fas fa-calendar-day pr-3"></i><%=@lecture.start_at%></p>
-        <p><i class="fas fa-history pr-3"></i><%= @lecture.duration%> hours</p>
-        <p><i class="fas fa-money-bill-wave pr-3"></i><%= @lecture.price%> €</p>
+        <div class="duration">
+          <p><i class="fas fa-hourglass-half pr-3"></i><span> <%= @lecture.duration %> hour</span></p>
+        </div>
+        <div class="price">
+          <p><i class="fas fa-money-bill-wave pr-3"></i><span> <%= @lecture.price %> €</span></p>
+        </div>
       </div>
       <div class="button-container">
-        <% unless @lecture.user == current_user %>
-          <%= link_to 'Book Class', lecture_bookings_path(@lecture), method: :POST ,class: "btn btn-gradient"%>
-        <% end %>
+        <%= link_to 'Book class', "#", {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#bookingModalCenter', class: "btn btn-block btn-flat btn-lg mb-3"} %>
+        <%= link_to 'Back to list', lectures_path, class: "btn btn-block btn-flat btn-lg", id: "back-button"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="bookingModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Send a booking request</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'new_booking' %>
       </div>
     </div>
   </div>

@@ -5,9 +5,9 @@
       <%= link_to lecture_path(lecture) do %>
         <% if lecture.photo.attached? %>
           <%= cl_image_tag lecture.photo.key, height: 200, crop: :fit, class: "card-image" %>
-        <% else %>
-          <%= image_tag "https://images.unsplash.com/photo-1513829596324-4bb2800c5efb", class: "card-image" %>
-        <% end %>
+         <% else %>
+           <%= image_tag "class-generic.jpg", class: "card-image" %>
+         <% end %>
       <% end %>
       <div class="card-trip-infos">
         <div class="lecture-info">

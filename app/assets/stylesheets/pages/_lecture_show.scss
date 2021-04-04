@@ -40,36 +40,34 @@
 }
 
 .card-description {
-  padding: 16px;
+  padding: 32px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   overflow: hidden;
   position: relative;
 }
 
-.card-description h3 {
+.card-description h1 {
   color: $light-red;
+  margin-bottom: 1em;
 }
 
 .card-description p {
   font-size: 18px;
 }
 
-.card-description ul {
-  list-style: none;
-  padding-left: 0;
-}
-
 .card-info {
-  padding: 16px;
+  padding: 32px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   overflow: hidden;
   position: relative;
+  text-align: center;
 }
 
 .card-info h3 {
   color: $light-red;
+  margin-bottom: 1em;
 }
 
 .card-info p {
@@ -77,24 +75,13 @@
 }
 
 .info-details {
-  margin-bottom: 60px;
+  display: block;
+  margin: auto;
 }
 
-.button-container {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-}
-
-.card-reviews {
-  margin: 16px;
-  padding: 16px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  overflow: hidden;
-}
-
-.card-reviews h3 {
-  color: $light-red;
+.price, .duration {
+  text-align: left;
+  margin: auto;
+  width: 40%;
 }
 
