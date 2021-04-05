@@ -2,7 +2,6 @@
   <%= f.input :title, label: 'Title' %>
   <%= f.input :category, label: 'Category' %>
   <%= f.input :price, label: 'Price (€)' %>
-  <%= f.input :start_at, label: 'Desired date and time', as: :string, required: true, input_html: {class: "datepicker"} %>
   <%= f.input :duration, label: 'Duration (hours)', collection: [0.5, 1, 1.5, 2, 2.5, 3] %>
   <%= f.input :description, label: 'Describe your class' %>
   <%= f.input :photo, label: 'Add a photo for your class', as: :file %>
