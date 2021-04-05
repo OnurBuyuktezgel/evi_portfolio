@@ -2,7 +2,7 @@
   <% if @lecture.photo.attached? %>
     <div class="showbanner" style=" background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @lecture.photo.key, class: "showbanner" %>);">
   <% else %>
-    <div class="showbanner" style=" background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'https://images.unsplash.com/photo-1513829596324-4bb2800c5efb' %>);">
+    <div class="showbanner" style=" background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "class-generic.jpg" %>);">
   <% end %>
   </div>
 
@@ -22,7 +22,7 @@
       <h3>Booking details</h3>
       <div class="info-details">
         <div class="duration">
-          <p><i class="fas fa-hourglass-half pr-3"></i><span> <%= @lecture.duration %> hour</span></p>
+          <p><i class="fas fa-clock pr-3"></i><span> <%= @lecture.duration %> hour</span></p>
         </div>
         <div class="price">
           <p><i class="fas fa-money-bill-wave pr-3"></i><span> <%= @lecture.price %> €</span></p>
@@ -37,7 +37,7 @@
 </div>
 
 <!-- Modals -->
-<div class="modal fade" id="bookingModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="bookingModalCenter" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -47,8 +47,13 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= render 'new_booking' %>
+        <%= simple_form_for [@lecture, @booking], url: lecture_bookings_path(@lecture), method: :POST do |f| %>
+          <%= f.input :desired_time, label: 'Desired date and time', as: :string, required: true, input_html: {class: "datepicker"} %>
+          <%= f.input :message, :input_html => {:rows => 3}, label: 'Your message' %>
+          <%= f.submit 'Send request', class: 'btn btn-flat btn-block btn-lg' %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+

@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new
+    @booking = Booking.new(booking_params)
     authorize @booking
     @booking.lecture = @lecture
 
@@ -27,8 +27,16 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to lecture_booking_path(@lecture, @booking)
     else
-      render :new
+      render new
     end
+  end
+
+  def edit
+  end
+
+  def update
+    @booking.update(booking_params)
+    redirect_to lecture_booking_path(@lecture, @booking)
   end
 
   def destroy
@@ -46,5 +54,9 @@ class BookingsController < ApplicationController
   def set_booking
     @booking = Booking.find(params[:id])
     authorize @booking
+  end
+
+  def booking_params
+    params.require(:booking).permit(:desired_time, :message, :status)
   end
 end

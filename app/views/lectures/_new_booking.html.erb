@@ -1,7 +1,7 @@
 <%= simple_form_for [@lecture, @booking], url: lecture_bookings_path(@lecture), method: :POST do |f| %>
   <%= f.input :desired_time, label: 'Desired date and time', as: :string, required: true, input_html: {class: "datepicker"} %>
   <%= f.input :message, :input_html => {:rows => 3}, label: 'Your message' %>
-  <%= f.button :submit, 'Send request', class: 'btn btn-flat btn-block btn-lg' %>
+  <%= f.button :submit, 'Send request', class: 'btn btn-flat btn-block btn-lg', :onclick => "form_submitted = true;" %>
 <% end %>
 
 

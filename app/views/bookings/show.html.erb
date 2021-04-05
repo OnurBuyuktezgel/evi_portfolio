@@ -1,8 +1,13 @@
-<h1>booking completed successfully</h1>
-<h1>booking completed successfully</h1>
-<h1>booking completed successfully</h1>
-<h1>booking completed successfully</h1>
-<h1>booking completed successfully</h1>
-<h1>booking completed successfully</h1>
-<h1>booking completed successfully</h1>
-<h1>booking completed successfully</h1>
+<div class="container">
+  <div class="booking-confirmation">
+    <h2>Dear <%=@lecture.user.first_name%>. Thank you, you booked <%= @lecture.title %> </h2>
+    <div class="form-card">
+      <p><i class="fas fa-hourglass-half pr-3"></i><%=@booking.status%></p>
+      <p><i class="fas fa-calendar-day pr-3"></i><%=@booking.desired_time%></p>
+      <p><i class="fas fa-history pr-3"></i><%=@lecture.duration%> hours</p>
+      <p><i class="fas fa-money-bill-wave pr-3"></i><%= @lecture.price%> $</p>
+      <p>I'll contact you as soon as possible to confirm the date and time.<br> I am looking forward to seeing you!</p>
+      <%= link_to 'Back', lecture_path(@lecture), class: "btn btn-flat btn-lg"%>
+    </div>
+  </div>
+</div>
