@@ -20,8 +20,10 @@
     <% end %>
   </div>
   <div class="new-lecture">
-    <%if current_user.admin? %>
-      <%= link_to "Create a class", new_lecture_path, class: 'btn btn-flat btn-block btn-lg' %>
+    <% if user_signed_in? %>
+      <%if current_user.admin? %>
+        <%= link_to "Create a class", new_lecture_path, class: 'btn btn-flat btn-block btn-lg' %>
+      <% end %>
     <% end %>
   </div>
 </div>
