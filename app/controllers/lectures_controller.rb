@@ -1,5 +1,5 @@
 class LecturesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_lecture, only: [:show, :destroy, :edit, :update]
   before_action :set_user, only: [:index, :new, :show, :edit, :update]
 
