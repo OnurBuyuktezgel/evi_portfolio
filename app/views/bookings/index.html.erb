@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="bookings">
+    <% if @bookings.length <= 0 %>
+      <div class="no-booking">
+        <h2>You haven't booked any class yet 🧐</h2>
+      </div>
+    <% else %>
+      <% @bookings.each do |booking| %>
+        <div class="card-product">
+          <% if booking.lecture.photo.attached? %>
+            <%= cl_image_tag booking.lecture.photo.key, height: 200, crop: :fit %>
+          <% else %>
+            <%= image_tag "class-generic.jpg" %>
+          <% end %>
+
+          <div class="card-product-infos">
+            <h2><%= link_to booking.lecture.title, lecture_path(booking.lecture) %></h2>
+            <p>Booking status: <%= booking.status.capitalize %></p>
+          </div>
+          <div class="details">
+            <%= link_to "Details", lecture_path(booking.lecture), class: 'btn btn-flat', id: "details-btn" %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -6,4 +6,9 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :lectures, through: :bookings
   has_one_attached :photo
+
+  # For activeadmin
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

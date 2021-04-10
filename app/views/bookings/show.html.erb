@@ -19,9 +19,12 @@
           <p><i class="far fa-calendar-alt"></i> <span> <%= @booking.desired_time.strftime("%A, %d %b %Y") %></span> </p>
           <p><i class="far fa-clock"></i> <span> <%= @booking.desired_time.strftime("%I:%M %p") %></span> </p>
           <p><i class="fas fa-money-bill-wave"></i> <span> <%= @lecture.price %> € </span></p>
+          <% if @booking.pending? %>
+            <%= link_to 'Cancel request', booking_path(@booking), method: :delete, data: { confirm: 'Do you really want to cancel your request?' }, class: "btn btn-block btn-flat btn-lg mb-3", id: "delete-button" %>
+          <% end %>
         </div>
         <div class="button-container">
-          <%= link_to 'Cancel request', booking_path(@booking), method: :delete, data: { confirm: 'Do you really want to cancel your request?' }, class: "btn btn-block btn-flat btn-lg mb-3", id: "delete-button" %>
+          <%= link_to 'Contact me', new_contact_path, class: "btn btn-block btn-flat btn-lg mb-3" %>
           <%= link_to 'Back to list', lectures_path, class: "btn btn-block btn-flat btn-lg" %>
         </div>
       </div>

@@ -65,7 +65,7 @@
 .card-product {
   overflow: hidden;
   height: 120px;
-  background: $light-red;
+  background: $almost-white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
@@ -87,7 +87,7 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
@@ -97,12 +97,12 @@
 }
 
 .card-product a:hover {
-  color: #A77638;
+  color: $light-red;
   text-decoration: none;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -119,17 +119,21 @@
   padding: 16px;
 }
 
-.cancel {
+.details {
   position: absolute;
   right: 16px;
 }
 
-.cancel a {
-  color: $almost-black;
+.details a {
+  color: white;
 }
 
-.cancel a:hover {
-  color: $almost-black;
+.details a:hover {
+  color: $almost-white;
+}
+
+#details-btn {
+  margin: 0px;
 }
 
 // Smallest device
