@@ -1,1 +1,1 @@
-This is a personal portfolio website of a professional musician and music teacher built with Rails, which also allows students book private classes. 
+This is a personal portfolio website of a professional musician and music teacher, where students can also book private classes. It's built with Rails.
