@@ -42,7 +42,7 @@ class BookingsController < ApplicationController
   def destroy
     @lecture = @booking.lecture
     @booking.destroy
-    redirect_to "/lectures/:lecture_id/bookings"
+    redirect_to lectures_path
   end
 
   private
