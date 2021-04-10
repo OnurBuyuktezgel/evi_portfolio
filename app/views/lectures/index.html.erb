@@ -1,4 +1,9 @@
 <div class="container">
+  <% if @lectures.length <= 0 %>
+    <div class="no-lecture">
+      <h2>No classes available at the moment, please try again later 😉</h2>
+    </div>
+  <% end %>
   <div class="cards">
     <% @lectures.each do |lecture| %>
     <div class="card-trip">
